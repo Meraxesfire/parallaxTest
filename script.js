@@ -15,3 +15,16 @@ gsap.to(".parallax-img", {
         markers: true
     }
 });
+
+gsap.to(".parallax-img-reverse", {
+    y: -90, // Se desplazan 400px hacia abajo
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".parallax-container",
+        start: "bottom bottom", 
+        end: "-=500", // El efecto dura 1500px de scroll
+        scrub: 3,
+        pin: true,    // Mantiene el contenedor fijo
+        markers: true
+    }
+});
