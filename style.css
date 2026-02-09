@@ -8,6 +8,10 @@
     src: url(FiraSansCondensed-Thin.ttf) format('truetype');
 }
 
+@font-face{
+    font-family:'caligrafia3';
+    src:url(Julius.ttf) format('truetype');
+}
 
 body { 
     margin: 0; 
@@ -20,22 +24,23 @@ body {
 .cabecera {
     width: 100vw;
     height: 10vh;
-    z-index:-1;
+    z-index:1;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-left: 20px;
-    border-top-left-radius: 30px;
+
 }
 
 .botonMenu {
     background-color: transparent;
     color: #f0f0f0;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
     margin-right: 20px;
     cursor: pointer;
+        font-family: 'caligrafiaTexto';
 }  
 
 .parallax-container {
@@ -126,19 +131,18 @@ body {
     height: 100vh;
     z-index: 1;
     background-color: #f0f0f0;
-    border-top: 2px solid rgba(0, 0, 0, 0.8);
 }
 
 .tituloNovedades{
     font-size: 50px;
     padding-left: 50px;
-    padding-top: 20px;
-    padding-bottom:50px;
+    padding-top: 200px;
+    padding-bottom:30px;
     line-height: 1;
     color:rgba(0, 0, 0,0.8);
     margin-top:0;
-    font-family:'bodoni moda', serif;
-    font-style: italic;
+    margin-bottom:0;
+    font-family:'caligrafia';
     justify-self: center;
 }
 .grillaFotos{
@@ -148,6 +152,7 @@ body {
     align-items: center;
     gap: 20px;
     padding: 20px;
+    margin-top:20px;
 }
 
 .imagenGrilla{
