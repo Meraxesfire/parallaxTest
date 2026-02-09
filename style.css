@@ -44,17 +44,24 @@ body {
     height:75vh;
     background-color: rgb(0, 0, 0);
     display:flex;
-    align-items: flex-start;
-    justify-content: center;
     padding:25px;
-    margin-top:75px;
+    margin-top:90px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .tarjetaInfo p{
-        color:white;
+        color:#f0f0f0;
         font-size: 20px;
         line-height: 1.5;
         max-width: 500px;
+        margin:0;
+
+}
+.tarjetaInfo img{
+    width: 30vh;
+    height: 30vh;
+    margin-right: 10px;
 }
 
 .divContacto{
