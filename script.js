@@ -9,7 +9,7 @@ gsap.to(".parallax-img", {
     scrollTrigger: {
         trigger: ".parallax-container",
         start: "top top", 
-        end: "+=600", // El efecto dura 1500px de scroll
+        end: "+=200", // El efecto dura 1500px de scroll
         scrub: 3,
         pin: true,    // Mantiene el contenedor fijo
         markers: true
