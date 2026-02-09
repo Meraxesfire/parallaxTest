@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'caligrafia';
+    src: url(Merriweather.ttf) format('truetype');
+}
+
+
 body { 
     margin: 0; 
     font-family: sans-serif; 
@@ -7,14 +13,14 @@ body {
 }
 
 .cabecera {
-    width: 90vh;
-    height: 80px;
-    z-index:-2;
-    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 10vh;
+    z-index:-1;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 50px;
+    padding-left: 20px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
@@ -41,73 +47,119 @@ body {
 }
 
 .tituloWeb {
-    font-size: 150px; 
-    padding-left: 50px;
+    font-size: 160px; 
+    padding-left: 80px;
     padding-top: 10px;
     line-height: 1;
-    z-index: -1;
+    z-index: 1;
     color:rgba(0, 0, 0, 0.8 );
     margin-bottom:0;
     margin-top: -20px;
+    font-family: 'caligrafia';
+    display:flex;
+    flex-direction: row;
 }
 .parallax-img {
     will-change: transform;
 }
 
-.divGrande{
-	display:block;
-	width: 100%;
-    height: 150px; /* Ajusta la altura al tamaño de tu cenefa */
-    background-image: url('cenefa.png');
-    background-repeat: repeat-x; /* Esto hace que se repita solo hacia la derecha */
-    background-size: contain;    /* O puedes usar un tamaño fijo, ej: 200px auto */
-    background-position: left center;
-	filter:contrast(200%);
+.subtitulo{
+    font-size: 40px;
+    padding-left: 80px;
+    line-height: 1;
+    z-index: 1;
+    color:rgba(0, 0, 0, 0.8 );
+    margin-top: -20px;
+    font-family: 'caligrafia';
+    font-style:italic;
 }
 
 .tarjetaInfo{
     width:100%;
-    height:75vh;
-    background-color: #572c392c;
+    height:auto;
+    background-color: rgba(145, 135, 114, 0.8);
     display:flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
-    padding:25px;
-    margin-top:90px;
-    flex-direction: row;
+    gap:20px;
+    padding-top:150px;
+    margin-top:0px;
     flex-wrap: wrap;
+    margin-left:0;
+    padding-bottom:180px;
+    border-top:2px solid rgba(0, 0, 0, 0.8);
 }
 
 .tarjetaInfo p{
-        color:#000000;
-        font-size: 20px;
+        color:#f0f0f0;
+        font-size: 27px;
         line-height: 1.5;
         max-width: 500px;
-        margin-top:-50;
+        margin-top:-50px;
+        padding-top:50px;
+        border-top: 2px solid rgba(0, 0, 0, 0.8);
+        font-family: 'montserrat', sans-serif;
+        flex-wrap: wrap;
+
 
 }
 .tarjetaInfo img{
-    width: 30vh;
-    height: 30vh;
-    margin-right: 10px;
+    width: 80vh;
+    height: auto;
+    margin-top:40px;
+    padding-top: 40px;
+
 }
 
+
+.newsDiv{
+    width:100%;
+    height: 100vh;
+    z-index: 1;
+    background-color: #f0f0f0;
+    border-top: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.tituloNovedades{
+    font-size: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    line-height: 1;
+    color:rgba(0, 0, 0,0.8);
+    margin-top:0;
+    font-family:'bodoni moda', serif;
+    font-style: italic;
+    justify-self: center;
+}
+
+.imagenGrilla{
+    width: 350px;
+    height: auto;
+    max-width:fit-content;
+    max-height: fit-content;
+    flex-wrap:wrap;
+}
+
+
 .divContacto{
-	height:50vh; 
+	height:100%; 
 	width:100%; 
-	background-color:rgb(0, 0, 0); 
+	background-color:rgba(0, 0, 0, 0.8); 
 	display: flex; 
-	justify-content: center;
     color:#f0f0f0;
     flex-direction:column;
     border-bottom-left-radius: 50px;
+    max-height: 400px;
 }
 .divContacto form{
     display:flex;
+    align-self: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 0px;
+    width:15%;
+    gap:8px;
 }
 
 .contactCardTitle{
