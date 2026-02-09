@@ -1,0 +1,68 @@
+body { 
+    margin: 0; 
+    font-family: sans-serif; 
+    overflow-x: hidden; 
+}
+
+.parallax-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Para que el texto y la imagen no se pisen */
+    justify-content: flex-start;	
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.tituloWeb {
+    font-size: 150px; /* Bajado un poco para que sea manejable */
+    margin: 0;
+    padding-left: 50px;
+    padding-top: 20px;
+    line-height: 1;
+    z-index: 2;
+}
+
+.parallax-img {
+    will-change: transform;
+}
+
+.contencion2 {
+    width: 100vh;
+    height: auto;
+}
+
+.divGrande{
+	display:block;
+	width: 100%;
+    height: 150px; /* Ajusta la altura al tamaño de tu cenefa */
+    background-image: url('cenefa.png');
+    background-repeat: repeat-x; /* Esto hace que se repita solo hacia la derecha */
+    background-size: contain;    /* O puedes usar un tamaño fijo, ej: 200px auto */
+    background-position: left center;
+	filter:contrast(200%);
+}
+
+.tarjetaInfo{
+    width:100%;
+    height:50vh;
+    background-color: aquamarine;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divContacto{
+	height:100vh; 
+	width:100%; 
+	background-color:rgb(214, 167, 137); 
+	display: flex; 
+	align-items: flex-start; 
+	justify-content: center;
+}
+.contactForm{
+	display:flex;
+	flex-direction:column;
+}
