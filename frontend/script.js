@@ -4,7 +4,7 @@ console.log("¡Script cargado!");
 
 // Animamos todo lo que tenga la clase .parallax-img
 gsap.to(".parallax-img", {
-    y: 210, // Se desplazan Xpx hacia abajo
+    y: 95, // Se desplazan Xpx hacia abajo
     ease: "none",
     scrollTrigger: {
         trigger: ".parallax-container",
@@ -25,7 +25,8 @@ gsap.to(".parallax-img-reverse", {
         end: "-=1500", // El efecto dura Xpx de scroll
         scrub: 3,
         pin: true,    // Mantiene el contenedor fijo
-        markers: true//guias BORRAR AL FINAL!!!!!!!!!!!!!!!!!!!!!!!!!<--------
+        markers: true//guias BORRAR AL FINAL!!!!!!!!!!!!!!!!!!!!!!!!!<--------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 });
 

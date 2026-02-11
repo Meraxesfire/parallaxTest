@@ -33,6 +33,17 @@ body {
 
 }
 
+
+.divPrueba{
+    display:flex;
+    width:fit-content;
+    min-width:fit-content;
+    height: fit-content;
+    min-height: fit-content;
+    flex-wrap:wrap;
+    padding-left: 80px;
+}
+
 .botonMenu {
     background-color: transparent;
     color: #f0f0f0;
@@ -58,7 +69,6 @@ body {
 
 .tituloWeb {
     font-size: 160px; 
-    padding-left: 80px;
     padding-top: 10px;
     line-height: 1;
     z-index: 1;
@@ -68,6 +78,7 @@ body {
     font-family: 'caligrafia';
     display:flex;
     flex-direction: row;
+    align-self: flex-end;
 }
 .parallax-img {
     will-change: transform;
@@ -75,13 +86,15 @@ body {
 
 .subtitulo{
     font-size: 40px;
-    padding-left: 80px;
+    padding-left: 10px;
+    padding-bottom: 1.7%;
     line-height: 1;
     z-index: 1;
     color:rgba(0, 0, 0, 0.8 );
     margin-top: -20px;
     font-family: 'caligrafia';
     font-style:italic;
+    align-self: flex-end;
 }
 
 .tarjetaInfo{
@@ -94,7 +107,7 @@ body {
     align-items: flex-start;
     justify-content: space-evenly;
     gap:20px;
-    padding-top:150px;
+    padding-top:100px;
     margin-top:0px;
     flex-wrap: wrap;
     margin-left:0;
@@ -102,28 +115,28 @@ body {
     background-color: rgba(185, 176, 164, 0.582);
 }
 
-
-
 .tarjetaInfo p{
         color:rgba(0, 0, 0, 0.8);
         font-size: 27px;
         line-height: 1.5;
         max-width: 500px;
         margin-top:0px;
-        padding:80px;
         border-top: 2px solid rgba(0, 0, 0, 0.8);
         border-bottom: 2px solid rgba(0, 0, 0, 0.8);
         font-family: 'caligrafiaTexto';
         flex-wrap: wrap;
         margin-right:50px;
+        padding-top:100px;
+        padding-bottom:100px;
 }
 .tarjetaInfo img{
     width: 45vw;
     height: auto;
     margin-top:40px;
-    padding-top: 40px;
+    padding-top: 120px;
     padding: 40px;
     margin-left:0;
+
 }
 
 
