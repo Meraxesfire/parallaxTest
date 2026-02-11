@@ -30,7 +30,7 @@ db.connect(err=>{
 
 //CREAR 2 RUTAS EN LA CONEXION, una para mandar y otra para recibir datos-------------------------------------
 
-//1 - RECIBIR datos (formulario de contacto)
+//1 - ENVIAR datos (formulario de contacto)
 app.post('/api/contact', (req,res)=>{//app.post define que esta ruta solo acepta POST
                                     //'/api/contact' es la ruta a la que el frontend va a enviar los datos del formulario de contacto.
     const {nombre,email,telefono,mensaje}=req.body; //aqui recibo los datos que me manda el frontend en formato json, y los convierto en variables para poder trabajar con ellas.
@@ -42,11 +42,11 @@ app.post('/api/contact', (req,res)=>{//app.post define que esta ruta solo acepta
 });
 
 
-//2 - MANDAR datos (fotos de galería)
-app.get('/api/gallery',(req,res)=>{ //app.get define que esta ruta solo acepta GET, es decir, solo se puede pedir información, no enviar.
-    const sql='SELECT * FROM galeria'; //aqui creo la sentencia sql para seleccionar todos los datos de la tabla galeria de la base de datos.
+//2 - TOMAR datos (fotos de galería)
+app.get('/api/galeria',(req,res)=>{ //app.get define que esta ruta solo acepta GET, es decir, solo se puede pedir información, no enviar.
+    const sql='SELECT * FROM fotos'; //aqui creo la sentencia sql para seleccionar todos los datos de la tabla galeria de la base de datos.
     db.query(sql,(err,result)=>{
-        if(err) return res.status(500).send(err); //si hay un error en la consulta sql, envio un error 500 al frontend con el mensaje de error.
+        if(err) return res.status(500).send(err); //si hay un error en la consulta sql, envia un error 500 al frontend con el mensaje de error.
         res.json(result); //si todo va bien, envio los datos de la galeria al frontend en formato json.
     });
 });

@@ -41,6 +41,7 @@ body {
     margin-right: 20px;
     cursor: pointer;
     font-family: 'caligrafiaTexto';
+    font-weight: bold;
 }  
 
 .parallax-container {

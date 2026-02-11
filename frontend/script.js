@@ -75,3 +75,48 @@ formulario.addEventListener('submit', async (e) => { //2º)AÑADO EVENTO DE ESCU
     }
 
 });
+
+
+//SIGUIENTE PASO: enlazar bbdd con la galeria para importar fotos automaticamente al cargar la pagina.
+//A continuacion SCRIPT para interaccion de GALERIA - BACKEND-------------------------------------------------------------
+
+const cargarGaleria = async() =>{                   //al crear una funcion asincrona (async) permitimos usar luego await. 
+                                                    // Esto es util para web que acceden a servidor porque tarda unos milisegundos en cargar, 
+                                                    // de esta forma el resto del contenido de la web no se detiene tambien ese tiempo.
+
+    const contenedor = document.querySelector('.grillaFotos');//Busco el div que incluirá la info
+    if (!contenedor) return;                        //esto es el Guard Clause, asegura que si no existe el contenedor seleccionado no siga.
+
+    try{ //intentta pero si el server esta apagado hace el catch
+        
+        const respuesta = await fetch('http://localhost:3000/api/galeria');//envia una peticion GET al lugar del servidor donde se guardan las fotos
+        const fotos = await respuesta.json(); //AWAIT espera a que responda y crea un array de objetos con el resultado
+
+        contenedor.innerHTML='';                    //Limpiar el html original para introducir lo nuevo
+
+
+        fotos.forEach(foto =>{                      //FOREACH recorre cada elemento del array fotos (el json del resultado)
+            const img = document.createElement('img');//esta const crea un elemento img en la memoria del navegador.
+            img.src=foto.ruta_url;                  //por cada foto del array, crea un elemento img y le da el valor 
+            img.alt=foto.titulo;                    //src=ruta_url y alt=titulo a las propiedades de la img que se creará en html
+            img.className='imagenGrilla';           //Para mantener la clase css original
+            contenedor.appendChild(img);            //Crea nodos hijos al div donde irán los img creados
+         });
+
+    } catch (error) {
+        console.error("Error cargando galeria",error);
+    }
+};
+
+document.addEventListener('DOMContentLoaded',cargarGaleria); //Esto es el DISPARADOR del evento, 
+                                                             // cuando carga el Dom del html ejecuta cargarGaleria.
+
+
+
+
+
+
+
+
+//SIGUIENTE PASO: hacer que la bbdd envíe los datos de "contacto" en un documento legible para el cliente que encargó la web, para que pueda ver los mensajes que le han enviado a través del formulario de contacto.
+
