@@ -165,8 +165,9 @@ body {
 }
 
 .divContacto{
-	height:100%; 
+    z-index: 1;
 	width:100%; 
+    min-height:100%;
 	background-color:rgba(0, 0, 0, 0.8); 
 	display: flex; 
     color:#f0f0f0;
@@ -180,12 +181,38 @@ body {
     align-items: flex-start;
     justify-content: center;
     margin-top: 0px;
-    width:15%;
-    gap:8px;
+    width:25%;
+    gap:15px;
 }
 
 .contactCardTitle{
 	display:flex;
     justify-content: center;
     margin-top: 50px; 
+    margin-bottom:30px;
+    font-size: 35px;
+    font-family: 'caligrafia';
+}
+
+.inputForm{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top:-10px;
+}
+
+.botonSubmit{
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding:10px 40px;
+    font-size: 15px;
+    font-style: bold;
+}
+.botonSubmit:hover{
+    background-color: #7a7979;
+    color:#f0f0f0
 }
